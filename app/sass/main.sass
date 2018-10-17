@@ -1,0 +1,365 @@
+@import "vars"
+@import "fonts"
+@import "mixins"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	max-width: 100vw
+	overflow-x: hidden
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+p
+	font-style: 15px
+.container
+	z-index: 1
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+h4
+	font-size: 15px
+	font-weight: 700
+	line-height: 15px
+	text-transform: uppercase
+	letter-spacing: 3px
+	color: $greyh
+	margin-bottom: 0
+
+b, strong
+	font-weight: bold
+
+button
+	border: 0
+	outline: 0
+	transition: .4s
+	cursor: pointer
+	color: #ffffff
+	font-family: Lato
+	&:active,
+	&:focus
+		outline: 0
+	// ----header---
+.header
+	height: 100vh
+	background-size: cover
+	background-position: center
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	&__text
+		width: 100%
+		color: #ffffff
+		text-align: center
+		h1
+			font-size: 60px
+			font-weight: 300
+			line-height: 48px
+			letter-spacing: -2px
+			margin-bottom: 22px
+		p
+			max-width: 681px
+			font-size: 17px
+			font-style: italic
+			line-height: 35px
+			font-weight: 300
+			margin: 0 auto
+	&__footer
+		width: 100%
+		display: flex
+		justify-content: center
+		align-self: flex-end
+		margin-bottom: 3%
+
+.ellipse
+	cursor: pointer
+	margin: 0 auto
+	margin-top: 75px
+	width: 99px
+	height: 99px
+	border: 10px solid #ffffff
+	border-radius: 10em
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: .4s
+	.fa-caret-right:before
+		transition: .4s
+		width: 100%
+		height: 28px
+		color: #ffffff
+		margin-right: -5px
+	&:hover
+		border-color: $accent
+		.fa-caret-right:before
+			color: $accent
+
+.pagebutton
+	padding: 24px 78px 29px
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.41)
+	border-radius: 3px
+	background-color: $footer
+	font-size: 20px
+	font-weight: 700
+	line-height: 0.01px
+	&:hover
+		background-color: $accent
+
+//----info----
+
+.info
+	max-width: 100vw
+	background-color: $accent
+	height: 100vh
+	position: relative
+	overflow: hidden
+	display: flex
+	align-items: center
+	&__phone
+		width: 624px
+		height: 1290px
+		position: absolute
+		right: 0
+		top: 60px
+		z-index: 2
+	&__shadow
+		width: 624px
+		height: 1290px
+		background-color: darken($accent, 20%)
+		position: absolute
+		z-index: 1
+		top: 100px
+		right: 25px
+		border-radius: 50px
+		opacity: 0.2
+	&__shape
+		&-big
+			z-index: 0
+			position: absolute
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 499px
+			height: 375px
+			right: 350px
+			bottom: -140px
+			background-color: $accent
+			border-radius: 10em
+		&-small
+			position: absolute
+			width: 300px
+			height: 300px
+			right: 450px
+			bottom: 130px
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+	&__text
+		z-index: 50
+		p
+			z-index: 50
+			color: #ffffff
+			font-size: 16px
+			margin-top: 3%
+			margin-bottom: 0
+		h2
+			font-size: 52px
+			line-height: 53px
+			font-weight: 300
+			color: #ffffff
+.accentbutton
+	margin-top: 5%
+	background-color: $accent
+	border: 3px solid #ffffff
+	font-size: 18px
+	letter-spacing: 0.7px
+	padding: 28px 76px 26px
+	&:hover
+		background-color: $hot
+	
+//------slider----------
+
+.slider
+	position: relative
+	height: 600px
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	background-color: $slider
+	color: #ffffff
+	&:after
+		content: ' '
+		display: block
+		position: absolute
+		bottom: -25px
+		+arr(40, 25, $slider, b)
+	&__content
+		h2
+			font-size: 43px
+			font-style: italic
+			font-weight: 300
+			line-height: 53px
+			max-width: 1036px
+			margin: 0 auto
+			letter-spacing: -0.5px
+		img
+			margin: 0 auto
+			border: 5px solid #ffffff
+			border-radius: 10em
+			margin-bottom: 3%
+
+.slick-dots
+	z-index: 99
+	position: absolute
+	bottom: 10%
+	& li button
+		width: 8px
+		height: 8px
+		border: 3px solid #ffffff
+		border-radius: 100%
+		&:before
+			content: ''
+		&:hover
+			background-color: #fff
+.slick-dots 
+	li.slick-active button
+		background-color: #fff
+		&:before
+			content: ''
+
+//----description----
+
+.description
+	min-height: 100vh
+	color: $grey
+	padding-top: 5%
+	&__text
+		margin-top: 20px
+		color: $grey
+		font-size: 16px
+		font-weight: 300
+		line-height: 30px
+
+.hotbutton
+	background-color: $hot
+	font-size: 18px
+	line-height: 20px
+	padding: 24px 50px
+	position: relative
+	left: 50%
+	margin-top: 3%
+	margin-left: -90px
+
+.splitline
+	position: relative
+	&:before
+		content: ' '
+		position: absolute
+		height: 100%
+		width: 1px
+		background-color: #d0d9e2
+		left: 50%
+
+//----conclusion----
+
+.conclusion
+	box-sizing: border-box
+	position: relative
+	min-height: 100vh
+	background-color: #f6f6f4
+	padding-top: 100px
+	&__content
+		color: $conclusion
+		text-shadow: 0 1px 0 #ffffff
+		h3
+			font-size: 45px
+			font-weight: 300
+			line-height: 53px
+		p
+			font-size: 16px
+			font-weight: 400
+			line-height: 30px
+		.fa
+			position: absolute
+			bottom: 0
+			&-chevron-left
+				right: 30px
+				color: #959595
+			&-chevron-right
+				right: 15px
+				color: #555555
+
+
+.card
+	box-shadow: inset 0 -3px 0 #eaeaea
+	background-color: #ffffff
+	width: 337px
+	&__header, &__header-accent
+		width: 337px
+		height: 346px
+		background-color: $hot
+	&__header-accent
+		background-color: $accent
+	&__content
+		width: 337px
+		height: 143px
+		padding: 30px 40px
+		p
+			color: $grey
+			font-family: Lato
+			font-size: 16px
+			font-style: italic
+			line-height: 16px
+			margin-top: 19px
+
+//----footer
+.footer
+	min-height: 100vh
+	max-height: 693px
+	background-color: $footer
+	padding-top: 75px
+	color: #ffffff
+	font-size: 14px
+	a
+		color: #ffffff
+	p
+		max-width: 382px
+		font-weight: 400
+		line-height: 24px
+	&__nav
+		list-style-type: none
+		max-width: 75px
+		padding-left: 0
+		float: right
+	&__img
+		margin-top: 50px
+		display: flex
+		justify-content: center
+
+		
+		
+
+@import "media" // Always at the end

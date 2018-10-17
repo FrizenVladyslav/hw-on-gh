@@ -1,0 +1,144 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.info
+		padding: 20px 0
+		&__phone
+			display: block
+			right: -150px
+		&__shadow
+			right: -130px
+		&__shape-big
+			right: 200px
+		&__shape-small
+			right: 300px
+		h2
+			font-size: 40px
+	.slider__content h2
+		font-size: 35px
+	.card
+		margin: 0 auto
+	.conclusion
+		padding-top: 50px
+		&__content
+			padding-top: 20px
+			text-align: center
+			.fa
+				display: none
+
+// ≥992px
++media-breakpoint-down(md)
+	.info
+		min-height: 80vh
+		height: auto
+		&__phone
+			display: none
+		&__shadow
+			display: none
+		&__shape-big
+			right: -150px
+		&__shape-small
+			right: -150px
+	.splitline
+		&:before
+			width: 0
+	.hotbutton
+		margin-top: 0
+		margin-bottom: 15px
+	.footer
+		padding-top: 50px
+		
+		
+
+// ≥768px
++media-breakpoint-down(sm)
+	.slider__content
+		h2
+			font-size: 25px
+	.ellipse
+		height: 60px
+		width: 60px
+		border: 7px solid #fff
+		i
+			font-size: 19px
+	.description
+		text-align: center
+	.hotbutton
+		left: 0
+		margin-left: 0
+	.card
+		margin-bottom: 15px
+	.footer
+		p
+			max-width: 100%
+			text-align: center
+		&__nav
+			display: flex
+			justify-content: center
+			max-width: 100%
+			float: none
+			li
+				margin: 5px
+				text-decoration: underline
+	
+// ≥576px
++media-breakpoint-down(xs)
+	.header__text
+		h1
+			font-size: 40px
+		p
+			font-size: 15px
+			line-height: 30px
+	.ellipse
+		height: 50px
+		width: 50px
+		border: 5px solid #fff
+		i
+			font-size: 15px
+	.pagebutton
+		font-size: 17px
+		padding: 20px 70px 25px
+	.info
+		text-align: center
+		h2
+			font-size: 30px
+			line-height: 35px
+		p
+			font-size: 14px
+		.accentbutton
+			padding: 20px 40px 25px
+			margin: 5px auto
+	.slider__content
+		h2
+			font-size: 20px
+			max-width: 100%
+	.card
+		width: 100%
+		&__header, &__content, &__header-accent
+			width: 100%
+	.footer
+		&__nav
+			li
+				font-size: 12px
+				white-space: nowrap
+				margin: 0 2px
+		&__img
+			margin: 20px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
