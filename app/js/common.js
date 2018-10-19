@@ -1,9 +1,7 @@
-$(function() {
-
-	$(document).ready(function(){
-		$('.slider').slick({
-			dots: true,
-		});
-	  });
-
-});
+$(function () {
+  $(document).ready(function () {
+    $('.slider').slick({
+      dots: true
+    })
+  })
+})

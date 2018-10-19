@@ -19,7 +19,8 @@
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "standard": "^12.0.1"
   },
   "dependencies": {
     "jquery": "^3.3.1",
