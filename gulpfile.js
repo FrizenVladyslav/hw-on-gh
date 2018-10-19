@@ -16,8 +16,6 @@ let autoprefixer = require('gulp-autoprefixer')
 
 let notify = require('gulp-notify')
 
-let jquery = 'node_modules/jquery/dist/jquery.min.js'
-let slider = 'node_modules/slick-carousel/slick/slick.min.js'
 
 gulp.task('browser-sync', function () {
   browserSync({
@@ -40,8 +38,8 @@ gulp.task('styles', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    jquery,
-    slider,
+    'app/libs/jquery/jquery.min.js',
+    'app/libs/slick/slick.min.js',
     'app/js/common.js' // Always at the end
   ])
     .pipe(concat('scripts.min.js'))
